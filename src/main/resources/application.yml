@@ -8,3 +8,19 @@ logging:
     # pattern:
     # console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){faint} %clr([%thread]){blue} %clr(%-5level){ERROR=red, WARN=yellow, INFO=green, DEBUG=cyan, TRACE=white} %clr(%-30.30logger){cyan} - %msg%n"
     # file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n"
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${course.datasource.host}:${course.datasource.port}/${course.datasource.database}?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: ${course.datasource.username}
+    password: ${course.datasource.password}
+mybatis-plus:
+  configuration:
+    # 控制台打印SQL
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 主键自增
+      id-type: auto

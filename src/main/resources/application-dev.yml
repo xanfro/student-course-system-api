@@ -1,0 +1,7 @@
+course:
+  datasource:
+    host: 115.227.20.243
+    port: 19213
+    database: course_system
+    username: root
+    password: root
