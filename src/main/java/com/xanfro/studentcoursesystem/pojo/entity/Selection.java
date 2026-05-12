@@ -8,15 +8,13 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@TableName("student")
-public class Student {
+@TableName("selection")
+public class Selection {
     @TableId(type = IdType.AUTO)
     private Long id;
-    private String name;
-    private Integer age;
-    private String gender;
-    private String major;
-    private String className;
-    private String grade;
-    private Double gpa;
+    private String courseCode;
+    private String courseName;
+    private String college;
+    private String studentNo;
+    private String studentName;
 }

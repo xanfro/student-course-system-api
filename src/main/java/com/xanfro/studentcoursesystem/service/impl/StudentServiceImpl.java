@@ -6,8 +6,6 @@ import com.xanfro.studentcoursesystem.pojo.entity.Student;
 import com.xanfro.studentcoursesystem.service.StudentService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class StudentServiceImpl extends ServiceImpl<StudentMapper,Student> implements StudentService {
 }
